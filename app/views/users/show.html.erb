@@ -1,0 +1,37 @@
+
+
+<br/>
+<div class="card">
+<div class="card-header">
+   <strong> <%= @user.name %></strong>
+  </div>
+<div class="card-body">
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <b>Emergency Contact:</b>
+  <%= @user.emergencycontact %>
+</p>
+
+<p>
+  <b>Employee Type:</b>
+  <%= @user.usertype %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user),class:"btn btn-primary" %> |
+<%= link_to 'Back', users_path,class:"btn btn-primary" %>
+<br/>
+</div>
+</div>
+
+<br/>
+<hr>
