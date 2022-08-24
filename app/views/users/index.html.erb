@@ -1,10 +1,10 @@
 <br/>
 <div class="card">
 <div class="card-header">
-<h1>Users</h1>
+<h1>User Details</h1>
     
-  </div>
-
+</div>
+<br>
 <table class="table table-striped">
   <thead class="table-dark">
     <tr>
@@ -25,17 +25,14 @@
         <td><%= user.phone %></td>
         <td><%= user.emergencycontact %></td>
         <td><%= user.usertype %></td>
-        <td><%= link_to 'Show',user,class:"btn btn-outline-info" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-outline-success" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+        <td><%= link_to 'Show',user,class:"btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-dark" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
 
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
 </div>
 <br/>
-<%= link_to 'New Employee', new_user_path,class:"btn btn-primary" %>
+<%= link_to 'New Employee', new_user_path,class:"btn btn-dark" %>

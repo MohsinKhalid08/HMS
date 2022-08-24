@@ -1,66 +1,61 @@
-<%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
+<%= form_for @user do |form| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this project from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
-        <% user.errors.each do |error| %>
+        <% @user.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group">
+    <%= form.text_field :name, class:"form-control" , placeholder:"Name"%>
   </div>
 
   <br/>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_area :email%>
+    <%= form.text_field :email, class:"form-control" , placeholder:"Email" %>
+  
   </div>
 
   <br/>
 
   <div class="field">
-    <%= form.label :phone%>
-    <%= form.text_area :phone %>
+   <%= form.text_field :phone, class:"form-control", placeholder:"Phone" %>
   </div>
 
   <br/>
 
   <div class="field">
-    <%= form.label :emergencycontact %>
-    <%= form.text_area :emergencycontact %>
+    <%= form.text_field :emergencycontact, class:"form-control", placeholder:"Emergency Contact" %>
   </div>
 
   <br/>
 
   <div class="field">
-    <%= form.label :usertype %>
-    <%= form.text_area :usertype %>
+    <%= form.text_field :usertype, class:"form-control", placeholder:"User Type" %>
+
   </div>
 
   <br/>
-
+  <%@generate_password = SecureRandom.base64(n=6) %>
   <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password,value: '123456',type: :hidden %>
   </div>
 
-  <br/>
+ 
   <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+    <%= form.password_field :password_confirmation,value: '123456',type: :hidden %>
   </div>
 
-  <br/>
+
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark" %>
   </div>
 <% end %>
