@@ -1,0 +1,18 @@
+<h1>Welcome to ForrenTech</h1>
+
+<h2>Congratulations !! </h2>
+<h3>You have successfully been employed as a permanant employee of ForrenTech. We Congratulate on your new role.</h3>
+
+Email:<%= @user.email %> 
+<br>
+Emergency Contact:<%= @user.emergencycontact %>
+<br>
+User Type: <%= @user.usertype %>
+<p>
+  <%= @greeting %>
+</p>
+
+<h3> Please do not share your credentials with anyone </h3>
+
+
+<%= image_tag attachments['forrentech.jpeg'].url, alt: 'My Photo' %>
