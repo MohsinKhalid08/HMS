@@ -12,6 +12,6 @@ class UserMailer < ApplicationMailer
     attachments['forrentech.jpeg'] = File.read('app/assets/images/forrentech.jpeg')
 
 
-    mail to: User.first.email, cc: User.all.pluck(:email), subject: "New Employeee Created"
+    mail to: User.last.email, cc: User.all.pluck(:email), subject: "New Employeee Created"
   end
 end

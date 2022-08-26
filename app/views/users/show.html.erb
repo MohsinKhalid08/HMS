@@ -29,8 +29,9 @@
   <b>Employee Type:</b>
   <%= @user.usertype %>
   </p>
-
+  <% if can? :update, User  %>
   <%= link_to 'Edit', edit_user_path(@user),class:"btn btn-success" %> 
+  <% end %>
   <br><br/>
   <%= link_to 'Back', users_path,class:"btn btn-dark" %>
   <br>

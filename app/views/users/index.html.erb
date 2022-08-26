@@ -26,13 +26,18 @@
         <td><%= user.emergencycontact %></td>
         <td><%= user.usertype %></td>
         <td><%= link_to 'Show',user,class:"btn btn-success" %></td>
+        <% if can? :update, user    %>
         <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-dark" %></td>
+        <% end  %>
+        <% if can? :update, user    %>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
-
+        <% end  %>
       </tr>
     <% end %>
   </tbody>
 </table>
 </div>
 <br/>
+<% if can? :create, User  %>
 <%= link_to 'New Employee', new_user_path,class:"btn btn-dark" %>
+ <% end  %>

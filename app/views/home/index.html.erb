@@ -1,3 +1,95 @@
 <br>
+<div class="d-flex justify-content-center">
 <h1>Welcome to ForrenTech Human Resource Management System</h1>
+
+</div>
 <hr>
+<br>
+<div class="d-flex justify-content-evenly">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> Add New User </h5>
+
+    <p class="card-text">Admin and HR can add a new User by clicking at the following link. If you are not login please make sure to login first</p>
+  </div>
+
+ <% if user_signed_in?%>
+
+
+ <%= link_to 'Add a New User',new_user_path, class:'btn btn-dark'%>
+<% end %>
+
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> View User Details </h5>
+
+    <p class="card-text">You can look at the user details by clicking at the following link. The User details can also be seen by the Employee but make sure to login first</p>
+  </div>
+   <% if user_signed_in?%>
+   <%= link_to 'View User Details',users_path, class:'btn btn-dark'%>
+   <% end %>
+  </div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> Other Modules </h5>
+    <p class="card-text">Coming Soon... Please stay tuned</p>
+    </div>
+
+    <div class="dropdown">
+    <div class="d-grid gap-2">
+       <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Modules
+     </button>
+     
+     <ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="#">Time Off</a></li>
+     <li><a class="dropdown-item" href="#">Birthday</a></li>
+     <li><a class="dropdown-item" href="#">Work from Home</a></li>
+    </ul>
+    </div>
+    </div>
+ </div>   
+</div>
+ <br>
+ <hr>
+<div class="d-flex justify-content-center">
+<h2>Services</h2>
+
+</div>
+<hr>
+<div class="d-flex justify-content-center">
+<br>
+<p>Understanding, dedication, and expertise best define our services. We offer all the IT services from design to deployment and everything that comes in between.</p>
+</div>
+<br>
+<div class="d-flex justify-content-evenly">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Custom Software Development </h5>
+
+    <p class="card-text">Having years of experience in product development, we work to realize our client’s ideas into platforms, websites, and mobile applications. With Forrentech, clients are free to share their ideas and watch them done without worrying about the minute details.</p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Product Strategy</h5>
+   
+    <p class="card-text">Our expert team designs efficient and workable product strategies that help to design and build products in a minimum time. With our expert product strategies, we deliver our clients what they want amalgamating with our latest technical knowledge.</p>
+
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Executive Tech Leadership</h5>
+ 
+    <p class="card-text">Our executive tech leadership with efficient team members brings in their experience and expert knowledge about technology with an ability to adapt themselves according to the latest technology needs. With our strong dedication and constant motivation, we work to bring satisfaction to our clients.</p>
+   
+  </div>
+</div>
+</div>
